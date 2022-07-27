@@ -27,18 +27,13 @@ def ler_bd(bd, query, params=None):
         cursor = con.cursor()
         if params:
 
-            print("Passando no IF")
             cursor.execute(query, params)
-            print("Executou IF!")
             
         else:
-            print("Passando no ELSE")
             cursor.execute(query)
             print("Executou!")
 
         resultado = cursor.fetchall()
-        print(cursor.fetchall())
-        print( resultado)
 
         cursor.close()
         desconectar(con)

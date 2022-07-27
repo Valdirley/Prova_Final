@@ -9,4 +9,4 @@ def ler_todas_Disciplinas(bd):
 
 def ler_aluno_nome(bd, nome):
     query = "SELECT * FROM Aluno WHERE nome = ?"  
-    return ler_bd(bd, query, ('%'+nome+'%',))
+    return ler_bd(bd, query, (nome,))
